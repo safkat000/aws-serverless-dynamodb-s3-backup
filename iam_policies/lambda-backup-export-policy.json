@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadDemoUsers",
+      "Effect": "Allow",
+      "Action": "dynamodb:Scan",
+      "Resource": "arn:aws:dynamodb:REGION:ACCOUNT_ID:table/jsonplaceholder-users"
+    },
+    {
+      "Sid": "WriteTimestampedJsonBackups",
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::YOUR_UNIQUE_BUCKET_NAME/backups/*"
+    }
+  ]
+}
